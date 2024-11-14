@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.gl {
+    margin-left: 150px;
+}
+
+.header .nav-button {
+    background-color: #4b0082;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: -10px;
+}
+
+.header .nav-button:hover {
+    background-color: #3a006b;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+  
+.header a:hover {
+    color:#3a006b;
+}
+  
+.header a:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3a006b;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+  
+.header a:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.auth-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.auth-container h2 {
+    margin-top: 40px;
+    color: #4b0082;
+    font-size: 24px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="password"],
+.auth-container select,
+.auth-container button {
+    width: 400px;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.auth-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+}
+
+.select-container {
+    position: relative;
+    width: 420px;
+}
+
+.select-container select {
+    width: 100%;
+    padding-right: 30px; 
+    border-radius: 0; 
+}
+
+.select-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+}
+
+.auth-container button {
+    width: 420px;
+    background-color: #4b0082;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-container button:hover {
+    background-color: #3a006b;
+}

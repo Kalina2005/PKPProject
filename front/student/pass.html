@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пропуски</title>
+    <link rel="stylesheet" href="pass.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">ejournal</a>
+        <a class="gl" href="index.html">Главная страница</a>
+        <a>Преподаватели</a>
+        <a href="ob.html">Объяснительные</a>
+        <a href="pass.html">Пропуски</a>
+        <a>Профиль</a>
+        <button class="nav-button">Выход</button>
+    </div>
+    <div class="groups-container">
+        <h2>Пропуски</h2>
+        <div class="chart-legend-container">
+            <div class="chart-container">
+                <canvas id="absenceChart"></canvas>
+            </div>
+            <div class="legend-container">
+                <div><span class="legend-color" style="background-color: #36A2EB;"></span> Уважительная причина</div>
+                <div><span class="legend-color" style="background-color: #FF6384;"></span> Неуважительная причина</div>
+            </div>
+        </div>
+        <div class="subject-list">
+            <div class="subject-item">
+                <input type="text" value="ООПиП">
+                <input type="text" value="Уважительная причина">
+                <input type="date" value="2024-10-28">
+                <input type="text" value="2 часа">
+            </div>
+            <div class="subject-item">
+                <input type="text" value="ПКП">
+                <input type="text" value="Уважительная причина">
+                <input type="date" value="2024-10-18">
+                <input type="text" value="2 часа">
+            </div>
+            <div class="subject-item">
+                <input type="text" value="ТПСИС">
+                <input type="text" value="Уважительная причина">
+                <input type="date" value="2024-10-12">
+                <input type="text" value="2 часа">
+            </div>
+            <div class="subject-item">
+                <input type="text" value="ПрогСП">
+                <input type="text" value="Неуважительная причина">
+                <input type="date" value="2024-10-01">
+                <input type="text" value="2 часа">
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('absenceChart').getContext('2d');
+        const absenceChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Уважительная причина(%)', 'Неуважительная причина(%)'],
+                datasets: [{
+                    data: [75, 25],
+                    backgroundColor: ['#36A2EB', '#FF6384'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false 
+                    },
+                }
+            }
+        });
+    </script>
+</body>
+</html>
